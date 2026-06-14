@@ -89,19 +89,19 @@
     );
   });
 
-  /* ── Section reveals (slide from left) ── */
+  /* ── Section reveals (fade up) ── */
   gsap.utils.toArray('[data-motion="section"]').forEach((el) => {
     gsap.fromTo(el,
-      { opacity: 0, x: -40 },
+      { opacity: 0, y: 36 },
       {
         opacity: 1,
-        x: 0,
-        duration: 0.7,
+        y: 0,
+        duration: 0.75,
         ease: 'power2.out',
         clearProps: 'transform,opacity',
         scrollTrigger: {
           trigger: el,
-          start: 'top 90%',
+          start: 'top 92%',
           toggleActions: 'play none none none',
         },
       }

@@ -1,5 +1,5 @@
 /* main.js — Turbo Contracting
-   Navigation, header scroll, year fill, Web3Forms contact handler */
+   Navigation, header scroll, year fill, jump nav, Web3Forms contact handler */
 
 const navToggle = document.querySelector("[data-nav-toggle]");
 const primaryNav = document.querySelector("[data-primary-nav]");
@@ -65,6 +65,33 @@ const updateHeader = () => {
 
 updateHeader();
 window.addEventListener("scroll", updateHeader, { passive: true });
+
+/* ── Services page jump nav active state ── */
+const jumpNav = document.querySelector('.tc-services-jumpnav');
+if (jumpNav) {
+  const sections = Array.from(document.querySelectorAll('.tc-service-section[id]'));
+  const links = Array.from(jumpNav.querySelectorAll('a[href^="#"]'));
+
+  const updateJumpNav = () => {
+    const threshold = window.scrollY + (window.innerHeight * 0.35) + 76;
+    let current = sections[0]?.id || '';
+    sections.forEach((sec) => {
+      if (sec.getBoundingClientRect().top + window.scrollY <= threshold) {
+        current = sec.id;
+      }
+    });
+    links.forEach((link) => {
+      const active = link.getAttribute('href') === '#' + current;
+      link.classList.toggle('is-active', active);
+      if (active) {
+        link.scrollIntoView({ inline: 'nearest', block: 'nearest', behavior: 'instant' });
+      }
+    });
+  };
+
+  window.addEventListener('scroll', updateJumpNav, { passive: true });
+  updateJumpNav();
+}
 
 if (contactForm && formNote) {
   formNote.setAttribute("aria-live", "polite");

@@ -49,6 +49,12 @@
   --shadow-card: 0 4px 24px rgba(26, 23, 20, 0.08);
   --shadow-hover: 0 8px 40px rgba(26, 23, 20, 0.16);
   --focus-ring: 0 0 0 3px rgba(232, 146, 10, 0.45);
+  /* Spacing scale */
+  --space-3: 12px;
+  --space-6: 24px;
+  --space-8: 40px;
+  /* Gold alias used in B/A slider */
+  --gold: #F0C400;
 }
 
 *,*::before,*::after { box-sizing: border-box; }
@@ -1120,6 +1126,10 @@ select {
   padding: 80px 0 100px;
 }
 .tc-hero-text { display: flex; flex-direction: column; }
+/* Fix auto-centering in flex column for split layout */
+.tc-hero-split .tc-hero-rule { margin-inline: 0; align-self: flex-start; }
+.tc-hero-split .tc-hero-sub { margin-inline: 0; }
+.tc-hero-split .tc-hero-actions { justify-content: flex-start; }
 .tc-hero-logo3d {
   display: flex;
   align-items: center;
@@ -1352,14 +1362,16 @@ select {
   margin: 16px 0 24px;
 }
 
-/* ─── Float animation for logo ───────────────── */
+/* ─── Float animation (kept for opt-in use) ──── */
 @keyframes tc-float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
 }
+/* Brand logo — static in header; subtle scale on hover only */
 .brand-logo {
-  animation: tc-float 4s ease-in-out infinite;
+  transition: transform var(--duration) var(--ease);
 }
+.brand:hover .brand-logo { transform: scale(1.06); }
 
 /* ─── Responsive gallery depth ───────────────── */
 @media (max-width: 900px) {
@@ -1368,6 +1380,87 @@ select {
 @media (max-width: 500px) {
   .tc-gallery-depth { grid-template-columns: 1fr 1fr; }
   .tc-ba-wrap { aspect-ratio: 4/3; }
+}
+
+/* ─── Services jump navigation ──────────────── */
+.tc-services-jumpnav {
+  position: sticky;
+  top: var(--header-height);
+  z-index: 90;
+  background: var(--ink);
+  border-bottom: 2px solid rgba(255,255,255,0.06);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.tc-services-jumpnav::-webkit-scrollbar { display: none; }
+.tc-services-jumpnav-inner {
+  display: flex;
+  align-items: stretch;
+  min-width: max-content;
+  padding: 0 4px;
+  width: min(100%, var(--container));
+  margin-inline: auto;
+}
+.tc-services-jumpnav a {
+  display: inline-flex;
+  align-items: center;
+  padding: 11px 14px;
+  color: var(--steel-2);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: color var(--duration) var(--ease), border-color var(--duration) var(--ease);
+}
+.tc-services-jumpnav a:hover,
+.tc-services-jumpnav a.is-active {
+  color: var(--amber);
+  border-bottom-color: var(--amber);
+}
+
+/* ─── Gallery photo caption overlay ─────────── */
+.tc-photo-3d {
+  position: relative;
+}
+.tc-photo-3d::after {
+  content: attr(data-caption);
+  position: absolute;
+  inset: auto 0 0;
+  padding: 28px 14px 12px;
+  background: linear-gradient(to top, rgba(14,12,20,0.82) 0%, transparent 100%);
+  color: var(--cream);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.tc-photo-3d:hover::after { opacity: 1; }
+
+/* ─── Stat row hover ─────────────────────────── */
+.tc-stat-item {
+  transition: background var(--duration) var(--ease);
+}
+.tc-stat-item:hover {
+  background: rgba(240, 196, 0, 0.05);
+}
+
+/* ─── Print styles ───────────────────────────── */
+@media print {
+  .site-header,
+  .nav-toggle,
+  .tc-cta-band,
+  .tc-stat-row,
+  .tc-gallery-section,
+  .tc-footer { display: none !important; }
+  body { background: #fff; color: #000; }
+  a[href]::after { content: " (" attr(href) ")"; }
 }
 
 /* Reduced motion */

@@ -12,17 +12,21 @@
     <meta property="og:url" content="https://turbocontracting.ca/">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://turbocontracting.ca/">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <meta property="og:image" content="https://turbocontracting.ca/images/servicetruck.jpg">
+    <meta name="robots" content="index, follow">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js" defer></script>
     <script src="js/main.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
     <script src="js/gsap-site.js" defer></script>
     <script src="js/logo3d.js" defer></script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":["LocalBusiness","GeneralContractor"],"name":"Turbo Contracting and Mining Services","description":"Owner-operated industrial and mining services contractor based in Northern Ontario. Licensed and insured. Surface & underground construction, millwright, welding, painting, sandblasting, hoisting, rigging, confined space, pipe installation — all in-house.","url":"https://turbocontracting.ca","email":"info@turbocontracting.ca","address":{"@type":"PostalAddress","addressRegion":"ON","addressCountry":"CA"},"areaServed":{"@type":"State","name":"Northern Ontario, Canada"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Industrial & Mining Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Industrial Millwright & Mill Maintenance"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Welding & Fabrication"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Painting & Sandblasting"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Surface Construction"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Underground Construction"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Confined Space Work & Watch"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Hoisting & Rigging"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Road Building"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Pipe Grooving & Installation"}}]}}</script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -51,7 +55,7 @@
       <!-- Hero -->
       <section class="tc-hero" data-hero>
         <div class="tc-hero-bg" data-hero-bg aria-hidden="true">
-          <img class="tc-hero-bg-img" src="images/1.jpg" alt="">
+          <img class="tc-hero-bg-img" src="images/1.jpg" alt="" fetchpriority="high" loading="eager">
         </div>
         <div class="container tc-hero-inner tc-hero-split">
           <div class="tc-hero-text">
@@ -188,14 +192,14 @@
           <span class="tc-section-label">Our Work</span>
           <h2 class="tc-section-title" id="gallery-heading">Field-proven across the north.</h2>
           <div class="tc-gallery-depth" data-motion="stagger">
-            <div class="tc-photo-3d" data-motion-item><img class="tc-gallery-img" src="images/servicetruck.jpg" alt="Turbo Contracting service truck"></div>
-            <div class="tc-photo-3d" data-motion-item><img class="tc-gallery-img" src="images/1.jpg" alt="Industrial work site"></div>
-            <div class="tc-photo-3d" data-motion-item><img class="tc-gallery-img" src="images/2.jpg" alt="Field crew at work"></div>
-            <div class="tc-photo-3d" data-motion-item><img class="tc-gallery-img" src="images/leachtank.jpg" alt="Leach tank installation"></div>
-            <div class="tc-photo-3d" data-motion-item><img class="tc-gallery-img" src="images/3.jpg" alt="Construction work site"></div>
-            <div class="tc-photo-3d" data-motion-item><img class="tc-gallery-img" src="images/stairs.jpg" alt="Structural stairs installation"></div>
-            <div class="tc-photo-3d" data-motion-item><img class="tc-gallery-img" src="images/svt2.jpg" alt="Service truck on site"></div>
-            <div class="tc-photo-3d" data-motion-item><img class="tc-gallery-img" src="images/4.jpg" alt="Industrial site work"></div>
+            <div class="tc-photo-3d" data-motion-item data-caption="Service Truck"><img class="tc-gallery-img" src="images/servicetruck.jpg" alt="Turbo Contracting service truck" loading="lazy" decoding="async"></div>
+            <div class="tc-photo-3d" data-motion-item data-caption="Industrial Site"><img class="tc-gallery-img" src="images/1.jpg" alt="Industrial work site" loading="lazy" decoding="async"></div>
+            <div class="tc-photo-3d" data-motion-item data-caption="Field Crew"><img class="tc-gallery-img" src="images/2.jpg" alt="Field crew at work" loading="lazy" decoding="async"></div>
+            <div class="tc-photo-3d" data-motion-item data-caption="Leach Tank"><img class="tc-gallery-img" src="images/leachtank.jpg" alt="Leach tank installation" loading="lazy" decoding="async"></div>
+            <div class="tc-photo-3d" data-motion-item data-caption="Construction Site"><img class="tc-gallery-img" src="images/3.jpg" alt="Construction work site" loading="lazy" decoding="async"></div>
+            <div class="tc-photo-3d" data-motion-item data-caption="Structural Stairs"><img class="tc-gallery-img" src="images/stairs.jpg" alt="Structural stairs installation" loading="lazy" decoding="async"></div>
+            <div class="tc-photo-3d" data-motion-item data-caption="On-Site Truck"><img class="tc-gallery-img" src="images/svt2.jpg" alt="Service truck on site" loading="lazy" decoding="async"></div>
+            <div class="tc-photo-3d" data-motion-item data-caption="Site Work"><img class="tc-gallery-img" src="images/4.jpg" alt="Industrial site work" loading="lazy" decoding="async"></div>
           </div>
           <div style="margin-top: var(--space-8); text-align: center;">
             <a class="btn-ghost" href="services.html">View All Services</a>
