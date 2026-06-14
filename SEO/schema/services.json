@@ -1,0 +1,109 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Industrial Millwright & Mill Maintenance",
+      "serviceType": "Millwright",
+      "provider": { "@type": "LocalBusiness", "name": "Turbo Contracting and Mining Services", "url": "https://turbocontracting.ca" },
+      "areaServed": "Northern Ontario, Canada",
+      "description": "Machinery installation, precision shaft and laser alignment, bearing replacement, mill maintenance, and mechanical commissioning for mining and industrial operations."
+    },
+    {
+      "@type": "Service",
+      "name": "Welding & Fabrication",
+      "serviceType": "Industrial Welding",
+      "provider": { "@type": "LocalBusiness", "name": "Turbo Contracting and Mining Services", "url": "https://turbocontracting.ca" },
+      "areaServed": "Northern Ontario, Canada",
+      "description": "Certified structural and field welding, custom fabrication, pipe welding on carbon steel, stainless, and alloy materials for industrial and mining applications."
+    },
+    {
+      "@type": "Service",
+      "name": "Painting & Sandblasting",
+      "serviceType": "Industrial Painting and Sandblasting",
+      "provider": { "@type": "LocalBusiness", "name": "Turbo Contracting and Mining Services", "url": "https://turbocontracting.ca" },
+      "areaServed": "Northern Ontario, Canada",
+      "description": "Abrasive blasting to bare metal and industrial paint application on heavy equipment, structural steel, tanks, and piping for corrosion protection in Northern Ontario environments."
+    },
+    {
+      "@type": "Service",
+      "name": "Surface Construction",
+      "serviceType": "Surface Construction",
+      "provider": { "@type": "LocalBusiness", "name": "Turbo Contracting and Mining Services", "url": "https://turbocontracting.ca" },
+      "areaServed": "Northern Ontario, Canada",
+      "description": "Structural steel erection, site infrastructure, concrete formwork, equipment pads, stairs, walkways, and industrial facility modifications at mining and industrial sites."
+    },
+    {
+      "@type": "Service",
+      "name": "Underground Construction",
+      "serviceType": "Underground Mining Construction",
+      "provider": { "@type": "LocalBusiness", "name": "Turbo Contracting and Mining Services", "url": "https://turbocontracting.ca" },
+      "areaServed": "Northern Ontario, Canada",
+      "description": "Underground mechanical installation, bulkhead and support structures, piping, and equipment installation for mining operations — certified crews, subsurface experience."
+    },
+    {
+      "@type": "Service",
+      "name": "Confined Space Work & Confined Space Watch",
+      "serviceType": "Confined Space Entry",
+      "provider": { "@type": "LocalBusiness", "name": "Turbo Contracting and Mining Services", "url": "https://turbocontracting.ca" },
+      "areaServed": "Northern Ontario, Canada",
+      "description": "Certified confined space entry and attendant watch for tanks, vessels, silos, tunnels, and permit-required spaces with atmospheric monitoring and emergency retrieval."
+    },
+    {
+      "@type": "Service",
+      "name": "Working at Heights",
+      "serviceType": "Working at Heights",
+      "provider": { "@type": "LocalBusiness", "name": "Turbo Contracting and Mining Services", "url": "https://turbocontracting.ca" },
+      "areaServed": "Northern Ontario, Canada",
+      "description": "Certified elevated work, fall protection system setup, rope access, aerial work platform operation, and headframe and conveyor structure maintenance."
+    },
+    {
+      "@type": "Service",
+      "name": "Hoisting & Rigging",
+      "serviceType": "Hoisting and Rigging",
+      "provider": { "@type": "LocalBusiness", "name": "Turbo Contracting and Mining Services", "url": "https://turbocontracting.ca" },
+      "areaServed": "Northern Ontario, Canada",
+      "description": "Certified rigging for heavy equipment picks, critical lift planning, sling and hardware inspection, and underground hoist and shaft work coordination."
+    },
+    {
+      "@type": "Service",
+      "name": "Exploration & Work Camp Set Up",
+      "serviceType": "Exploration Camp Setup",
+      "provider": { "@type": "LocalBusiness", "name": "Turbo Contracting and Mining Services", "url": "https://turbocontracting.ca" },
+      "areaServed": "Northern Ontario, Canada",
+      "description": "Work camp assembly, exploration support infrastructure, temporary power and water setup, trailer positioning, and site clearing for remote Northern Ontario programs."
+    },
+    {
+      "@type": "Service",
+      "name": "Core Farms & Core Farm Relocation",
+      "serviceType": "Core Farm Construction and Relocation",
+      "provider": { "@type": "LocalBusiness", "name": "Turbo Contracting and Mining Services", "url": "https://turbocontracting.ca" },
+      "areaServed": "Northern Ontario, Canada",
+      "description": "Core farm construction, core box racking setup, full relocation services, core storage facility installation, and site restoration for exploration and mining programs."
+    },
+    {
+      "@type": "Service",
+      "name": "Road Building",
+      "serviceType": "Site Road Construction",
+      "provider": { "@type": "LocalBusiness", "name": "Turbo Contracting and Mining Services", "url": "https://turbocontracting.ca" },
+      "areaServed": "Northern Ontario, Canada",
+      "description": "Access road and haul road construction, grading, culvert installation, road base preparation, and mine site road building for year-round heavy equipment use in Northern Ontario."
+    },
+    {
+      "@type": "Service",
+      "name": "Pipe Grooving & Installation",
+      "serviceType": "Industrial Pipe Installation",
+      "provider": { "@type": "LocalBusiness", "name": "Turbo Contracting and Mining Services", "url": "https://turbocontracting.ca" },
+      "areaServed": "Northern Ontario, Canada",
+      "description": "Steel pipe grooving 2–24 inch, grooved coupling installation, HDPE poly pipe, process piping, pipe supports, and pressure testing for mining and industrial sites."
+    },
+    {
+      "@type": "Service",
+      "name": "Shutdown & Turnaround Support",
+      "serviceType": "Plant Shutdown Support",
+      "provider": { "@type": "LocalBusiness", "name": "Turbo Contracting and Mining Services", "url": "https://turbocontracting.ca" },
+      "areaServed": "Northern Ontario, Canada",
+      "description": "Rapid mobilization for plant shutdowns, multi-trade coordination, critical path task management, mechanical verification, and post-shutdown commissioning support."
+    }
+  ]
+}

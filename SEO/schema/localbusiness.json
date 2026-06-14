@@ -1,0 +1,44 @@
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "GeneralContractor"],
+  "name": "Turbo Contracting and Mining Services",
+  "url": "https://turbocontracting.ca",
+  "email": "info@turbocontracting.ca",
+  "telephone": "ADD_PHONE_NUMBER",
+  "image": "https://turbocontracting.ca/images/servicetruck.jpg",
+  "logo": "https://turbocontracting.ca/images/logo.jpg",
+  "description": "Owner-operated industrial and mining services contractor based in Northern Ontario. Licensed and insured. Surface and underground construction, millwright, welding, painting, sandblasting, hoisting, rigging, confined space, and pipe installation — all in-house. No subcontracting.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "ON",
+    "addressCountry": "CA"
+  },
+  "areaServed": [
+    "Timmins",
+    "Sudbury",
+    "Thunder Bay",
+    "Sault Ste. Marie",
+    "Kirkland Lake",
+    "Cochrane",
+    "Kapuskasing",
+    "Elliot Lake",
+    "Northern Ontario"
+  ],
+  "knowsAbout": [
+    "Industrial Millwright",
+    "Mill Maintenance",
+    "Welding and Fabrication",
+    "Sandblasting",
+    "Industrial Painting",
+    "Surface Construction",
+    "Underground Construction",
+    "Confined Space Entry",
+    "Hoisting and Rigging",
+    "Exploration Camp Setup",
+    "Core Farm Relocation",
+    "Road Building",
+    "Pipe Grooving and Installation",
+    "Shutdown and Turnaround Support"
+  ],
+  "sameAs": []
+}
