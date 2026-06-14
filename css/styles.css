@@ -16,7 +16,7 @@
   --ink: #0E0C14;
   --ink-2: #1C1A26;
   --ink-3: #2E2C3A;
-  --steel: #858090;
+  --steel: #5F5B6B;
   --steel-2: #A09AAC;
   --steel-3: #C8C5D0;
   --line: #D4D0DC;
@@ -26,7 +26,7 @@
   --flame-glow: rgba(27, 104, 216, 0.22);
   --navy: #1A2540;
   --navy-2: #242D4A;
-  --steel-silver: #858090;
+  --steel-silver: #5F5B6B;
   --steel-dark: #3D3A47;
   --steel-light: #C8C5D0;
   --font-display: 'Bebas Neue', 'Arial Narrow', Arial, sans-serif;
@@ -1461,6 +1461,72 @@ select {
   .tc-footer { display: none !important; }
   body { background: #fff; color: #000; }
   a[href]::after { content: " (" attr(href) ")"; }
+}
+
+/* ─── Button shimmer ─────────────────────────── */
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.28) 50%, transparent 60%);
+  transform: translateX(-100%);
+  transition: transform 0.5s var(--ease);
+  pointer-events: none;
+}
+.btn-primary:hover::before, .btn-primary:focus-visible::before {
+  transform: translateX(100%);
+}
+
+/* ─── Scroll progress bar ────────────────────── */
+#tc-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: var(--amber);
+  z-index: 999;
+  pointer-events: none;
+  transition: width 80ms linear;
+}
+
+/* ─── Back to top button ─────────────────────── */
+#tc-back-top {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--amber);
+  color: var(--ink);
+  border: none;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 90;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity var(--duration) var(--ease), transform var(--duration) var(--ease),
+              background var(--duration) var(--ease);
+  box-shadow: 0 4px 16px rgba(26,23,20,0.20);
+}
+#tc-back-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+#tc-back-top:hover, #tc-back-top:focus-visible {
+  background: var(--amber-dark);
 }
 
 /* Reduced motion */

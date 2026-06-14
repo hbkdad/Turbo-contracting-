@@ -1,5 +1,5 @@
 /* main.js — Turbo Contracting
-   Navigation, header scroll, year fill, jump nav, Web3Forms contact handler */
+   Navigation, header scroll, year fill, scroll progress, back-to-top, jump nav, Web3Forms */
 
 const navToggle = document.querySelector("[data-nav-toggle]");
 const primaryNav = document.querySelector("[data-primary-nav]");
@@ -65,6 +65,29 @@ const updateHeader = () => {
 
 updateHeader();
 window.addEventListener("scroll", updateHeader, { passive: true });
+
+/* ── Scroll progress bar ── */
+const progressBar = document.getElementById("tc-progress");
+if (progressBar) {
+  const updateProgress = () => {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+    progressBar.style.width = pct.toFixed(2) + "%";
+  };
+  window.addEventListener("scroll", updateProgress, { passive: true });
+  updateProgress();
+}
+
+/* ── Back to top button ── */
+const backTop = document.getElementById("tc-back-top");
+if (backTop) {
+  window.addEventListener("scroll", () => {
+    backTop.classList.toggle("is-visible", window.scrollY > 400);
+  }, { passive: true });
+  backTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
 
 /* ── Services page jump nav active state ── */
 const jumpNav = document.querySelector('.tc-services-jumpnav');

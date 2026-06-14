@@ -29,6 +29,7 @@
     <script type="application/ld+json">{"@context":"https://schema.org","@type":["LocalBusiness","GeneralContractor"],"name":"Turbo Contracting and Mining Services","description":"Owner-operated industrial and mining services contractor based in Northern Ontario. Licensed and insured. Surface & underground construction, millwright, welding, painting, sandblasting, hoisting, rigging, confined space, pipe installation — all in-house.","url":"https://turbocontracting.ca","email":"info@turbocontracting.ca","address":{"@type":"PostalAddress","addressRegion":"ON","addressCountry":"CA"},"areaServed":{"@type":"State","name":"Northern Ontario, Canada"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Industrial & Mining Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Industrial Millwright & Mill Maintenance"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Welding & Fabrication"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Painting & Sandblasting"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Surface Construction"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Underground Construction"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Confined Space Work & Watch"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Hoisting & Rigging"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Road Building"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Pipe Grooving & Installation"}}]}}</script>
   </head>
   <body>
+    <div id="tc-progress" aria-hidden="true"></div>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header" data-header>
       <div class="container header-inner">
@@ -70,6 +71,7 @@
           </div>
           <div class="tc-hero-logo3d" data-motion="hero" aria-hidden="true">
             <canvas id="logo-3d-canvas"></canvas>
+            <noscript><img src="images/logo.jpg" alt="" style="width:100%;border-radius:8px;"></noscript>
           </div>
         </div>
       </section>
@@ -238,7 +240,7 @@
       </section>
 
       <!-- Stats -->
-      <div class="tc-stat-row" aria-label="Key facts about Turbo Contracting and Mining Services">
+      <section class="tc-stat-row" aria-label="Key facts about Turbo Contracting and Mining Services">
         <div class="container tc-stat-row-inner">
           <div class="tc-stat-item">
             <span class="tc-stat-num" data-counter="10" data-suffix="+" aria-label="10 or more">0</span>
@@ -257,7 +259,7 @@
             <span class="tc-stat-label">Coverage Area</span>
           </div>
         </div>
-      </div>
+      </section>
 
       <!-- CTA band -->
       <section class="tc-cta-band" data-motion="section">
@@ -302,5 +304,6 @@
         <p>&copy; <span data-year></span> Turbo Contracting and Mining Services. All rights reserved.</p>
       </div>
     </footer>
+    <button id="tc-back-top" aria-label="Back to top" type="button">&#8593;</button>
   </body>
 </html>
