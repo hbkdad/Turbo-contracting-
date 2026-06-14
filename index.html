@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Turbo Contracting and Mining Services | Northern Ontario</title>
+    <meta name="description" content="Turbo Contracting and Mining Services — surface and underground construction, millwright, welding, painting, sandblasting, hoisting, rigging, confined space, pipe installation, and more across Northern Ontario.">
+    <meta name="theme-color" content="#1A1714">
+    <meta property="og:title" content="Turbo Contracting and Mining Services | Northern Ontario">
+    <meta property="og:description" content="Surface & underground construction, millwright, welding, painting, sandblasting, hoisting, rigging, confined space — all in-house, Northern Ontario.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://turbocontracting.ca/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://turbocontracting.ca/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
+    <script src="js/gsap-site.js" defer></script>
+    <script src="js/logo3d.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Turbo Contracting and Mining Services home">
+          <img class="brand-logo" src="images/logo.jpg" alt="Turbo Contracting and Mining Services">
+          <span class="brand-text">
+            <span>Turbo Contracting</span>
+            <small>Mining Services &middot; Northern Ontario</small>
+          </span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
+          <span></span><span></span><span></span><span class="sr-only">Menu</span>
+        </button>
+        <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation" data-primary-nav>
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html" class="nav-cta">Request a Quote</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+
+      <!-- Hero -->
+      <section class="tc-hero" data-hero>
+        <div class="tc-hero-bg" data-hero-bg aria-hidden="true">
+          <img class="tc-hero-bg-img" src="images/1.jpg" alt="">
+        </div>
+        <div class="container tc-hero-inner tc-hero-split">
+          <div class="tc-hero-text">
+            <p class="tc-kicker" data-motion="hero">Surface &amp; Underground &middot; Northern Ontario &middot; Licensed &amp; Insured</p>
+            <h1 class="tc-hero-headline" data-motion="hero">Surface.<br>Underground.<br>Built for the North.</h1>
+            <hr class="tc-hero-rule" data-motion="hero" aria-hidden="true">
+            <p class="tc-hero-sub" data-motion="hero">Turbo Contracting and Mining Services delivers millwright, welding, painting, sandblasting, construction, hoisting, rigging, confined space, and pipe installation to industrial and mining operations across Northern Ontario &mdash; all done in-house. No subcontracting. No surprises.</p>
+            <div class="tc-hero-actions" data-motion="hero">
+              <a class="btn-primary" href="contact.html">Request a Quote</a>
+              <a class="btn-ghost" href="services.html">Our Services</a>
+            </div>
+          </div>
+          <div class="tc-hero-logo3d" data-motion="hero" aria-hidden="true">
+            <canvas id="logo-3d-canvas"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <!-- Service tags quick list -->
+      <div class="tc-section" style="padding-top: var(--space-sm); padding-bottom: var(--space-sm);" data-motion="section">
+        <div class="container">
+          <span class="tc-section-label">What We Do</span>
+          <div class="tc-service-tags" role="list" aria-label="Services offered">
+            <span class="tc-service-tag" role="listitem">Millwright &amp; Mill Maintenance</span>
+            <span class="tc-service-tag" role="listitem">Welding &amp; Fabrication</span>
+            <span class="tc-service-tag" role="listitem">Painting &amp; Sandblasting</span>
+            <span class="tc-service-tag" role="listitem">Surface Construction</span>
+            <span class="tc-service-tag" role="listitem">Underground Construction</span>
+            <span class="tc-service-tag" role="listitem">Confined Space Work</span>
+            <span class="tc-service-tag" role="listitem">Confined Space Watch</span>
+            <span class="tc-service-tag" role="listitem">Working at Heights</span>
+            <span class="tc-service-tag" role="listitem">Hoisting &amp; Rigging</span>
+            <span class="tc-service-tag" role="listitem">Exploration / Work Camp Set Up</span>
+            <span class="tc-service-tag" role="listitem">Core Farms &amp; Relocation</span>
+            <span class="tc-service-tag" role="listitem">Road Building</span>
+            <span class="tc-service-tag" role="listitem">Pipe Grooving &amp; Installation</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- What We Do (feature cards) -->
+      <section class="tc-section" aria-labelledby="what-heading" data-motion="section">
+        <div class="container">
+          <h2 class="tc-section-title" id="what-heading">Trades that keep Northern Ontario moving.</h2>
+          <p class="tc-section-sub">From underground construction to surface finishing, mill maintenance to exploration camp set-up — Turbo Contracting brings skilled trades and heavy-industry experience to operations that can't afford downtime.</p>
+          <div class="tc-what-grid" data-motion="stagger">
+            <article class="tc-feature-card" data-motion-item>
+              <div class="tc-feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg>
+              </div>
+              <h3>Millwright &amp; Mill Support</h3>
+              <p>Precision machinery installation, shaft alignment, bearing replacement, mill maintenance, and mechanical commissioning. We get equipment running right the first time.</p>
+            </article>
+            <article class="tc-feature-card" data-motion-item>
+              <div class="tc-feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 2C8 6 4 10 4 14a8 8 0 0 0 16 0c0-4-4-8-8-12z"/><path d="M12 12v6M9 15l3 3 3-3"/></svg>
+              </div>
+              <h3>Welding &amp; Fabrication</h3>
+              <p>Structural welding, field welding, custom fabrication, and pipe welding for industrial applications &mdash; executed by certified welders to code requirements.</p>
+            </article>
+            <article class="tc-feature-card" data-motion-item>
+              <div class="tc-feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+              </div>
+              <h3>Surface &amp; Underground Construction</h3>
+              <p>Civil and structural construction work both on surface and underground. Road building, core farms, exploration camp set-up, and more &mdash; built for remote Northern Ontario conditions.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Before / After — Painting & Sandblasting -->
+      <section class="tc-section" style="background: var(--cream-2);" aria-labelledby="painting-heading" data-motion="section">
+        <div class="container">
+          <span class="tc-section-label">Painting &amp; Sandblasting</span>
+          <span class="tc-flame-line" aria-hidden="true"></span>
+          <h2 class="tc-section-title" id="painting-heading">Surface prep done right.</h2>
+          <p class="tc-section-sub">Industrial-grade sandblasting removes corrosion, mill scale, and old coatings down to bare metal. Then we finish with durable industrial paint systems that stand up to the conditions Northern Ontario throws at equipment. Drag to compare.</p>
+          <div class="tc-ba-wrap" role="img" aria-label="Before and after sandblasting comparison">
+            <div class="tc-ba-before">
+              <img src="images/before.jpg" alt="Before sandblasting — corroded bare metal">
+            </div>
+            <div class="tc-ba-after">
+              <img src="images/after.jpg" alt="After sandblasting and painting — glossy black finish">
+            </div>
+            <div class="tc-ba-handle" aria-hidden="true"></div>
+            <span class="tc-ba-label tc-ba-label--before">Before</span>
+            <span class="tc-ba-label tc-ba-label--after">After</span>
+          </div>
+          <div style="margin-top: var(--space-8); text-align: center;">
+            <a class="btn-primary" href="services.html#painting-sandblasting">View Painting &amp; Sandblasting</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Industries -->
+      <section class="tc-industries" aria-labelledby="industries-heading" data-motion="section">
+        <div class="container">
+          <span class="tc-section-label">Industries Served</span>
+          <h2 class="tc-section-title" id="industries-heading">Built for heavy industry.</h2>
+          <p class="tc-section-sub">Northern Ontario runs on industrial operations. Turbo Contracting works where the machinery is &mdash; underground, on surface, and in the field.</p>
+          <div class="tc-industries-grid" data-motion="stagger">
+            <article class="tc-industry-card" data-motion-item>
+              <div class="tc-industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+              <h3>Mining</h3>
+            </article>
+            <article class="tc-industry-card" data-motion-item>
+              <div class="tc-industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+              <h3>Exploration</h3>
+            </article>
+            <article class="tc-industry-card" data-motion-item>
+              <div class="tc-industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+              <h3>Manufacturing</h3>
+            </article>
+            <article class="tc-industry-card" data-motion-item>
+              <div class="tc-industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 22v-8l9-9 9 9v8"/><path d="M9 22v-6h6v6"/></svg></div>
+              <h3>Construction</h3>
+            </article>
+            <article class="tc-industry-card" data-motion-item>
+              <div class="tc-industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 22v-8l9-9 9 9v8"/></svg></div>
+              <h3>Pulp &amp; Paper</h3>
+            </article>
+            <article class="tc-industry-card" data-motion-item>
+              <div class="tc-industry-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+              <h3>Utilities</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Photo Gallery -->
+      <section class="tc-gallery-section" aria-labelledby="gallery-heading" data-motion="section">
+        <div class="container">
+          <span class="tc-section-label">Our Work</span>
+          <h2 class="tc-section-title" id="gallery-heading">Field-proven across the north.</h2>
+          <div class="tc-gallery-depth" data-motion="stagger">
+            <div class="tc-photo-3d" data-motion-item><img class="tc-gallery-img" src="images/servicetruck.jpg" alt="Turbo Contracting service truck"></div>
+            <div class="tc-photo-3d" data-motion-item><img class="tc-gallery-img" src="images/1.jpg" alt="Industrial work site"></div>
+            <div class="tc-photo-3d" data-motion-item><img class="tc-gallery-img" src="images/2.jpg" alt="Field crew at work"></div>
+            <div class="tc-photo-3d" data-motion-item><img class="tc-gallery-img" src="images/leachtank.jpg" alt="Leach tank installation"></div>
+            <div class="tc-photo-3d" data-motion-item><img class="tc-gallery-img" src="images/3.jpg" alt="Construction work site"></div>
+            <div class="tc-photo-3d" data-motion-item><img class="tc-gallery-img" src="images/stairs.jpg" alt="Structural stairs installation"></div>
+            <div class="tc-photo-3d" data-motion-item><img class="tc-gallery-img" src="images/svt2.jpg" alt="Service truck on site"></div>
+            <div class="tc-photo-3d" data-motion-item><img class="tc-gallery-img" src="images/4.jpg" alt="Industrial site work"></div>
+          </div>
+          <div style="margin-top: var(--space-8); text-align: center;">
+            <a class="btn-ghost" href="services.html">View All Services</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Turbo -->
+      <section class="tc-why" aria-labelledby="why-heading" data-motion="section">
+        <div class="container tc-why-split">
+          <div>
+            <span class="tc-section-label">Why Turbo</span>
+            <ul class="tc-why-list" data-motion="stagger">
+              <li class="tc-why-item" data-motion-item>
+                <span class="tc-why-num">01</span>
+                <div><h3>Owner-Operated</h3><p>You deal directly with the owner &mdash; not a dispatcher, not a project manager. The person accountable for the work answers your calls.</p></div>
+              </li>
+              <li class="tc-why-item" data-motion-item>
+                <span class="tc-why-num">02</span>
+                <div><h3>No Subcontracting</h3><p>Every scope we take on is executed by our own tradespeople. Quality and liability stay with us from first mobilization to final sign-off.</p></div>
+              </li>
+              <li class="tc-why-item" data-motion-item>
+                <span class="tc-why-num">03</span>
+                <div><h3>Certified for the Work</h3><p>Confined space, working at heights, hoisting and rigging, common core &mdash; we hold the certifications your site requires before anyone steps on it.</p></div>
+              </li>
+              <li class="tc-why-item" data-motion-item>
+                <span class="tc-why-num">04</span>
+                <div><h3>Fast Mobilization</h3><p>When a plant goes down or a project needs to move, Turbo Contracting mobilizes quickly and gets to work without a lengthy ramp-up period.</p></div>
+              </li>
+            </ul>
+          </div>
+          <div class="tc-why-right">
+            <h2 class="tc-section-title" id="why-heading">The right people. The right certifications. Done properly.</h2>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats -->
+      <div class="tc-stat-row" aria-label="Key facts about Turbo Contracting and Mining Services">
+        <div class="container tc-stat-row-inner">
+          <div class="tc-stat-item">
+            <span class="tc-stat-num" data-counter="10" data-suffix="+" aria-label="10 or more">0</span>
+            <span class="tc-stat-label">Years Field Experience</span>
+          </div>
+          <div class="tc-stat-item">
+            <span class="tc-stat-num" data-counter="13" data-suffix="+" aria-label="13 or more">0</span>
+            <span class="tc-stat-label">Trades &amp; Services</span>
+          </div>
+          <div class="tc-stat-item">
+            <span class="tc-stat-num" data-counter="100" data-suffix="%" aria-label="100 percent">0</span>
+            <span class="tc-stat-label">In-House Work</span>
+          </div>
+          <div class="tc-stat-item">
+            <span class="tc-stat-num" aria-label="Northern Ontario">N. ON</span>
+            <span class="tc-stat-label">Coverage Area</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA band -->
+      <section class="tc-cta-band" data-motion="section">
+        <div class="container tc-cta-band-inner">
+          <div>
+            <h2>Got a scope that needs a crew?</h2>
+            <p>Tell us the work &mdash; surface or underground, millwright or welding, painting or pipe installation. We&rsquo;ll give you a straight answer on fit and a fair quote.</p>
+          </div>
+          <div class="tc-cta-actions">
+            <a class="btn-ghost" href="contact.html">Request a Quote</a>
+            <a class="tc-link" href="services.html">View Services</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="tc-footer">
+      <div class="container tc-footer-grid">
+        <div>
+          <a class="tc-footer-brand" href="index.html" aria-label="Turbo Contracting and Mining Services home">
+            <span class="brand-text"><span>Turbo Contracting</span><small>Mining Services &middot; Northern Ontario</small></span>
+          </a>
+          <p>Owner-operated industrial and mining services contractor based in Northern Ontario. Licensed and insured. Surface &amp; underground construction, millwright, welding, painting, sandblasting, hoisting, rigging, confined space, pipe installation &mdash; all in-house.</p>
+        </div>
+        <div>
+          <h3>Pages</h3>
+          <ul class="tc-footer-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="tc-footer-contact">
+          <h3>Contact</h3>
+          <a href="mailto:info@turbocontracting.ca">info@turbocontracting.ca</a>
+          <span>Northern Ontario</span>
+          <a href="contact.html" style="margin-top:8px;">Request a Quote</a>
+        </div>
+      </div>
+      <div class="container tc-footer-bottom">
+        <p>&copy; <span data-year></span> Turbo Contracting and Mining Services. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
