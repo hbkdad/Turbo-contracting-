@@ -59,7 +59,7 @@
 
 *,*::before,*::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: auto; }
 
 body {
   margin: 0;
@@ -1208,6 +1208,7 @@ select {
   border-radius: 4px;
   display: block;
   transition: opacity 0.25s;
+  will-change: transform;
 }
 .tc-gallery-img:hover { opacity: 0.8; }
 
@@ -1253,6 +1254,7 @@ select {
   object-position: center;
   filter: brightness(0.22) saturate(0.6);
   display: block;
+  will-change: transform;
 }
 .tc-hero-inner { position: relative; z-index: 1; }
 

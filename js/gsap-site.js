@@ -10,7 +10,7 @@
 
   /* ── Lenis smooth scroll ── */
   if (typeof Lenis !== 'undefined') {
-    const lenis = new Lenis({ duration: 1.2, smoothWheel: true, lerp: 0.08 });
+    const lenis = new Lenis({ duration: 1.0, smoothWheel: true, lerp: 0.12 });
     lenis.on('scroll', ScrollTrigger.update);
     gsap.ticker.add((t) => lenis.raf(t * 1000));
     gsap.ticker.lagSmoothing(0);
@@ -141,7 +141,7 @@
         trigger: img,
         start: 'top bottom',
         end: 'bottom top',
-        scrub: 1.2,
+        scrub: 0.5,
       },
     });
   });
