@@ -1,0 +1,172 @@
+/* careers.css — Turbo Contracting Careers page styles */
+
+/* ─── Career position card ───────────────────── */
+.tc-career-card {
+  background: var(--ink-2);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  margin-bottom: 24px;
+}
+.tc-career-card:last-child { margin-bottom: 0; }
+
+.tc-career-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+
+.tc-career-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background: rgba(240, 196, 0, 0.12);
+  border: 1px solid rgba(240, 196, 0, 0.35);
+  color: var(--amber);
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 999px;
+  margin-bottom: 10px;
+}
+.tc-career-badge::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--amber);
+  animation: tc-pulse 1.6s ease-in-out infinite;
+}
+@keyframes tc-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.35; }
+}
+
+.tc-career-title {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 6px;
+  line-height: 1;
+}
+
+.tc-career-meta {
+  color: var(--steel-2);
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.tc-career-apply-btn {
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.tc-career-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.tc-career-col h4 {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--amber);
+  margin-bottom: 12px;
+  margin-top: 24px;
+}
+.tc-career-col h4:first-child { margin-top: 0; }
+
+.tc-career-col p {
+  color: var(--steel-3);
+  font-size: 0.97rem;
+  line-height: 1.7;
+}
+
+.tc-career-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+.tc-career-list li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--steel-3);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin-bottom: 8px;
+}
+.tc-career-list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--amber);
+  font-weight: 700;
+}
+
+.tc-career-sidebar-note {
+  padding: 20px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius-md);
+  margin-top: 4px;
+}
+.tc-career-sidebar-note h4 { margin-top: 0; }
+.tc-career-sidebar-note .tc-career-list { margin-bottom: 0; }
+
+/* ─── File input ─────────────────────────────── */
+.tc-file-input {
+  display: block;
+  width: 100%;
+  padding: 10px 14px;
+  background: var(--cream);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--ink);
+  cursor: pointer;
+  transition: border-color var(--duration) var(--ease);
+}
+.tc-file-input:focus-visible {
+  outline: none;
+  border-color: var(--amber);
+  box-shadow: var(--focus-ring);
+}
+.tc-file-hint {
+  display: block;
+  margin-top: 6px;
+  color: var(--steel-2);
+  font-size: 0.8rem;
+}
+
+/* ─── Responsive ─────────────────────────────── */
+@media (max-width: 860px) {
+  .tc-career-body {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .tc-career-card {
+    padding: 24px 20px;
+  }
+  .tc-career-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .tc-career-apply-btn { width: 100%; justify-content: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tc-career-badge::before { animation: none; }
+}
