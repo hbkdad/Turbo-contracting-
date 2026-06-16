@@ -125,7 +125,7 @@ if (contactForm && formNote) {
     const accessKey = contactForm.querySelector('[name="access_key"]')?.value;
     if (!accessKey || accessKey === "YOUR_WEB3FORMS_ACCESS_KEY") {
       formNote.textContent =
-        "Form not yet configured. To request a quote, email info@turbocontracting.ca directly.";
+        "Form not yet configured. To request a quote, email inspirationwelding@gmail.com directly.";
       formNote.classList.add("is-active");
       return;
     }
@@ -147,7 +147,7 @@ if (contactForm && formNote) {
 
       if (json.success) {
         formNote.textContent =
-          "Quote request sent — we’ll be in touch shortly. For urgent work, email info@turbocontracting.ca or call directly.";
+          "Quote request sent — we’ll be in touch shortly. For urgent work, call Rob at 705-262-4046.";
         formNote.classList.add("is-active");
         contactForm.reset();
       } else {
@@ -155,7 +155,7 @@ if (contactForm && formNote) {
       }
     } catch (_err) {
       formNote.textContent =
-        "Something went wrong. Please email info@turbocontracting.ca directly.";
+        "Something went wrong. Please email inspirationwelding@gmail.com directly.";
       formNote.classList.add("is-active");
     } finally {
       submitBtn.textContent = originalText;

@@ -34,9 +34,13 @@ Marketing/conversion site for an owner-operated industrial and mining contractor
 - Lenis 1.1.13 (smooth scroll, integrated with GSAP ticker)
 - Three.js 0.158.0
 
+## Owner / Contact
+- **Name:** Rob Montgomery
+- **Phone:** 705-262-4046 (`tel:+17052624046`)
+- **Email:** inspirationwelding@gmail.com
+
 ## Known Issues / Placeholders
-- `contact.html:108` — `value="YOUR_WEB3FORMS_ACCESS_KEY"` — form non-functional until replaced
-- No phone number on site — client has not provided one yet (highest local SEO priority)
+- `contact.html:115` + `careers.html:82` — `value="YOUR_WEB3FORMS_ACCESS_KEY"` — forms non-functional until replaced
 - FAQPage schema written (`SEO/schema/faq.json`) but not yet embedded in HTML
 
 ## SEO Assets
