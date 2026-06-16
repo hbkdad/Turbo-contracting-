@@ -154,9 +154,11 @@ const lbBdrop        = lightbox?.querySelector('.tc-lightbox-backdrop');
 let currentPhotos = [];
 let lbIndex = 0;
 let lastFocused = null;
+let lastPhotoBtn = null;
 
 function openIndModal(industry, label) {
   const photos = industryPhotos[industry] || [];
+  if (!photos.length) return;
   currentPhotos = photos;
   indModalTitle.textContent = label;
   indModalGrid.innerHTML = photos.map((src, i) =>
@@ -165,10 +167,7 @@ function openIndModal(industry, label) {
   ).join('');
   indModal.classList.add('is-open');
   document.body.classList.add('tc-modal-open');
-  indModalClose.focus();
-  indModalGrid.querySelectorAll('.tc-ind-photo-btn').forEach((btn) => {
-    btn.addEventListener('click', () => openLightbox(Number(btn.dataset.index)));
-  });
+  indModalClose?.focus();
 }
 
 function closeIndModal() {
@@ -183,11 +182,12 @@ function openLightbox(index) {
   lbImg.alt = 'Photo ' + (index + 1) + ' of ' + currentPhotos.length;
   lbCounter.textContent = (index + 1) + ' / ' + currentPhotos.length;
   lightbox.classList.add('is-open');
-  lbClose.focus();
+  lbClose?.focus();
 }
 
 function closeLightbox() {
   lightbox.classList.remove('is-open');
+  lastPhotoBtn?.focus();
 }
 
 function lbStep(dir) {
@@ -204,6 +204,11 @@ if (indModal) {
     card.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); }
     });
+  });
+  // Delegated photo click — one listener survives modal re-opens, no accumulation
+  indModalGrid?.addEventListener('click', (e) => {
+    const btn = e.target.closest('.tc-ind-photo-btn');
+    if (btn) { lastPhotoBtn = btn; openLightbox(Number(btn.dataset.index)); }
   });
   indModalClose?.addEventListener('click', closeIndModal);
   indModalBdrop?.addEventListener('click', closeIndModal);
