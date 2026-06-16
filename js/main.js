@@ -116,6 +116,18 @@ if (jumpNav) {
   updateJumpNav();
 }
 
+/* ── Service gallery dropdowns ── */
+document.querySelectorAll('[data-service-gallery]').forEach((gallery) => {
+  const btn = gallery.querySelector('.tc-gallery-toggle');
+  const panel = gallery.querySelector('.tc-gallery-panel');
+  if (!btn || !panel) return;
+  btn.addEventListener('click', () => {
+    const open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+    panel.classList.toggle('is-open', !open);
+  });
+});
+
 if (contactForm && formNote) {
   formNote.setAttribute("aria-live", "polite");
 
