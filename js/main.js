@@ -128,6 +128,102 @@ document.querySelectorAll('[data-service-gallery]').forEach((gallery) => {
   });
 });
 
+/* ── Industry gallery modal & lightbox ── */
+const industryPhotos = {
+  mining:        ['leachtank.jpg','1.jpg','2.jpg','3.jpg','4.jpg'],
+  exploration:   ['svt2.jpg','servicetruck.jpg','5.jpg','6.jpg','7.jpg'],
+  manufacturing: ['stairs.jpg','8.jpg','9.jpg','10.jpg','11.jpg'],
+  construction:  ['stairs.jpg','12.jpg','13.jpg','14.jpg','15.jpg'],
+  pulp:          ['leachtank.jpg','16.jpg','17.jpg','18.jpg','19.jpg'],
+  utilities:     ['servicetruck.jpg','20.jpg','21.jpg','22.jpg','23.jpg'],
+};
+
+const indModal       = document.getElementById('tc-ind-modal');
+const indModalGrid   = document.getElementById('tc-ind-modal-grid');
+const indModalTitle  = document.getElementById('tc-ind-modal-title');
+const indModalClose  = indModal?.querySelector('.tc-ind-modal-close');
+const indModalBdrop  = indModal?.querySelector('.tc-ind-modal-backdrop');
+const lightbox       = document.getElementById('tc-lightbox');
+const lbImg          = document.getElementById('tc-lightbox-img');
+const lbCounter      = document.getElementById('tc-lightbox-counter');
+const lbClose        = lightbox?.querySelector('.tc-lightbox-close');
+const lbPrev         = lightbox?.querySelector('.tc-lightbox-prev');
+const lbNext         = lightbox?.querySelector('.tc-lightbox-next');
+const lbBdrop        = lightbox?.querySelector('.tc-lightbox-backdrop');
+
+let currentPhotos = [];
+let lbIndex = 0;
+let lastFocused = null;
+
+function openIndModal(industry, label) {
+  const photos = industryPhotos[industry] || [];
+  currentPhotos = photos;
+  indModalTitle.textContent = label;
+  indModalGrid.innerHTML = photos.map((src, i) =>
+    `<button class="tc-ind-photo-btn" data-index="${i}" aria-label="Open photo ${i + 1} of ${photos.length}">` +
+    `<img src="images/${src}" alt="" loading="lazy" decoding="async"></button>`
+  ).join('');
+  indModal.classList.add('is-open');
+  document.body.classList.add('tc-modal-open');
+  indModalClose.focus();
+  indModalGrid.querySelectorAll('.tc-ind-photo-btn').forEach((btn) => {
+    btn.addEventListener('click', () => openLightbox(Number(btn.dataset.index)));
+  });
+}
+
+function closeIndModal() {
+  indModal.classList.remove('is-open');
+  document.body.classList.remove('tc-modal-open');
+  lastFocused?.focus();
+}
+
+function openLightbox(index) {
+  lbIndex = index;
+  lbImg.src = 'images/' + currentPhotos[index];
+  lbImg.alt = 'Photo ' + (index + 1) + ' of ' + currentPhotos.length;
+  lbCounter.textContent = (index + 1) + ' / ' + currentPhotos.length;
+  lightbox.classList.add('is-open');
+  lbClose.focus();
+}
+
+function closeLightbox() {
+  lightbox.classList.remove('is-open');
+}
+
+function lbStep(dir) {
+  openLightbox((lbIndex + dir + currentPhotos.length) % currentPhotos.length);
+}
+
+if (indModal) {
+  document.querySelectorAll('[data-industry-trigger]').forEach((card) => {
+    const activate = () => {
+      lastFocused = card;
+      openIndModal(card.dataset.industryTrigger, card.querySelector('h3').textContent);
+    };
+    card.addEventListener('click', activate);
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); }
+    });
+  });
+  indModalClose?.addEventListener('click', closeIndModal);
+  indModalBdrop?.addEventListener('click', closeIndModal);
+  lbClose?.addEventListener('click', closeLightbox);
+  lbBdrop?.addEventListener('click', closeLightbox);
+  lbPrev?.addEventListener('click', () => lbStep(-1));
+  lbNext?.addEventListener('click', () => lbStep(1));
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      if (lightbox.classList.contains('is-open')) { closeLightbox(); return; }
+      if (indModal.classList.contains('is-open')) { closeIndModal(); }
+    }
+    if (lightbox.classList.contains('is-open')) {
+      if (e.key === 'ArrowLeft')  lbStep(-1);
+      if (e.key === 'ArrowRight') lbStep(1);
+    }
+  });
+}
+
 if (contactForm && formNote) {
   formNote.setAttribute("aria-live", "polite");
 
