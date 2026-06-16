@@ -134,7 +134,7 @@ const industryPhotos = {
   exploration:   ['svt2.jpg','servicetruck.jpg','5.jpg','6.jpg','7.jpg'],
   manufacturing: ['stairs.jpg','8.jpg','9.jpg','10.jpg','11.jpg'],
   construction:  ['stairs.jpg','12.jpg','13.jpg','14.jpg','15.jpg'],
-  pulp:          ['leachtank.jpg','16.jpg','17.jpg','18.jpg','19.jpg'],
+  pulp:          ['16.jpg','17.jpg','18.jpg','19.jpg','stairs.jpg'],
   utilities:     ['servicetruck.jpg','20.jpg','21.jpg','22.jpg','23.jpg'],
 };
 
